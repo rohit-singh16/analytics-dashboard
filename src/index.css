@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================= */
+/* 🌌 DARK SPACE BACKGROUND */
+/* ============================= */
+
+.dark-space {
+  background:
+    radial-gradient(circle at 20% 20%, #1e293b 0%, transparent 40%),
+    radial-gradient(circle at 80% 30%, #0f172a 0%, transparent 45%),
+    linear-gradient(180deg, #020617, #020617);
+  position: relative;
+}
+
+/* Moving grid lines */
+.dark-space::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    );
+  background-size: 60px 60px;
+  animation: gridMove 250s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Floating connection dots */
+.dark-space::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(99,102,241,0.35) 1px, transparent 1px),
+    radial-gradient(circle, rgba(56,189,248,0.25) 1px, transparent 1px);
+  background-size: 140px 140px, 220px 220px;
+  animation: dotsMove 100s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes gridMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 300px 300px;
+  }
+}
+
+@keyframes dotsMove {
+  from {
+    background-position: 0 0, 100px 100px;
+  }
+  to {
+    background-position: -300px 200px, 200px -300px;
+  }
+}
+
+/* ============================= */
+/* 🧊 GLASS CARDS (ON DARK BG) */
+/* ============================= */
+
+.glass-card {
+  position: relative;
+  z-index: 2;
+  background: rgba(122, 120, 120, 0.046);
+  border-radius: 16px;
+  padding: 24px;
+  
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.119);
+}
+
+/* ============================= */
+/* INPUTS */
+/* ============================= */
+
+.input {
+  width: 100%;
+  height: 44px;                 /* 🔥 consistent height */
+  padding:  1px;              /* horizontal padding only */
+  border-radius: 10px;
+
+  background: rgba(48, 49, 31, 0.35);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+
+  color: #e5e7eb;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.input::placeholder {
+  color: #94a3b8;
+  font-size: 13px;               /* soft gray */
+}
+
+/* ============================= */
+/* BUTTONS */
+/* ============================= */
+
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  color: rgb(252, 248, 248);
+  font-weight: 500;
+  background: linear-gradient(135deg, #8c8ff3, #6a3bf6);
+  box-shadow: 0 0 20px rgba(133, 135, 239, 0.6);
+}
+
+.secondary-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #cbd5e1;
+}
+
+/* ============================= */
+/* 🟡 YELLOW ACTION BUTTON */
+/* ============================= */
+
+.btn-warning {
+  padding: 10px 20px;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #020617;
+  background: linear-gradient(
+    135deg,
+    #fde047,
+    #facc15,
+    #f59e0b
+  );
+
+  box-shadow:
+    0 10px 30px rgba(250, 204, 21, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+  transition: all 0.25s ease;
+}
+
+.btn-warning:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.btn-warning:active {
+  transform: scale(0.96);
+}
+
+/* ----------------------------- */
+/* 🟡 OUTLINE CANCEL BUTTON */
+/* ----------------------------- */
+
+.btn-warning-outline {
+  padding: 10px 20px;
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  color: #fde047;
+  border: 1px solid rgba(250, 204, 21, 0.5);
+
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+.btn-warning-outline:hover {
+  background: rgba(250, 204, 21, 0.12);
+}
+
+
+/* ============================= */
+/* TITLE GLOW */
+/* ============================= */
+
+.glow-text {
+  color: rgba(114, 78, 245, 0.886);
+  text-shadow:
+    0 0 20px rgba(99,102,241,0.6),
+    0 0 40px rgba(56,189,248,0.25);
+}
+
+/* ============================= */
+/* TOAST STYLE */
+/* ============================= */
+
+.react-hot-toast > div {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+/* ============================= */
+/* 🌐 NETWORK CONNECTION LINES */
+/* ============================= */
+
+.network-zone {
+  position: relative;
+}
+
+.network-zone::before {
+  content: "";
+  position: absolute;
+  inset: -120px;
+  background-image:
+    linear-gradient(
+      45deg,
+      rgba(232, 241, 99, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      -45deg,
+      rgba(56,189,248,0.12) 1px,
+      transparent 1px
+    );
+  background-size: 120px 120px;
+  animation: networkMove 30s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes networkMove {
+  from {
+    background-position: 0 0, 200px 200px;
+  }
+  to {
+    background-position: 400px -400px, -400px 400px;
+  }
+}
+
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #875af9,   
+    #875af9,   
+    #875af9    
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
