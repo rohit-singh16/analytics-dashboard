@@ -45,6 +45,10 @@ This project fulfills all frontend assessment requirements:
   - Smooth transitions and chart animations
 
 ---
+<img width="1876" height="578" alt="image" src="https://github.com/user-attachments/assets/ef3d854c-a452-4f6b-bfec-82bd1d33b360" />
+<img width="1850" height="734" alt="image" src="https://github.com/user-attachments/assets/703a0b00-67db-40c8-8d68-7b81e6a8231f" />
+<img width="1828" height="715" alt="image" src="https://github.com/user-attachments/assets/82da7774-cdbb-4d28-b161-f882cf0ec588" />
+<img width="1870" height="797" alt="image" src="https://github.com/user-attachments/assets/ff32d53d-1dce-4864-9bd1-6af1379f8e62" />
 
 ## 🛠️ Tech Stack
 
@@ -109,10 +113,7 @@ Netlify enables simple, reliable frontend deployment with environment variable s
 🔒 Security Note
 This project intentionally allows public read/write access for demo purposes.
 In a production setup, Supabase Auth and stricter Row Level Security policies would be applied.
-<img width="1876" height="578" alt="image" src="https://github.com/user-attachments/assets/ef3d854c-a452-4f6b-bfec-82bd1d33b360" />
-<img width="1850" height="734" alt="image" src="https://github.com/user-attachments/assets/703a0b00-67db-40c8-8d68-7b81e6a8231f" />
-<img width="1828" height="715" alt="image" src="https://github.com/user-attachments/assets/82da7774-cdbb-4d28-b161-f882cf0ec588" />
-<img width="1870" height="797" alt="image" src="https://github.com/user-attachments/assets/ff32d53d-1dce-4864-9bd1-6af1379f8e62" />
+
 
 
 
