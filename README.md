@@ -74,11 +74,6 @@ This project fulfills all frontend assessment requirements:
 ├── tailwind.config.ts
 └── package.json
 
-yaml
-Copy code
-
----
-
 ## ⚙️ Local Setup & Run
 
 ### 1️⃣ Clone the repository
@@ -87,16 +82,13 @@ git clone https://github.com/rohit-singh16/analytics-dashboard.git
 cd analytics-dashboard
 2️⃣ Install dependencies
 bash
-Copy code
 npm install
 3️⃣ Create .env file
 env
-Copy code
 VITE_SUPABASE_URL=your_supabase_project_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 4️⃣ Run locally
 bash
-Copy code
 npm run dev
 ☁️ Deployment
 The project is deployed using Netlify (GitHub-based CI/CD).
