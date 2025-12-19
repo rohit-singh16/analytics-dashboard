@@ -1,73 +1,120 @@
-# React + TypeScript + Vite
+# Call Analytics Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript web application built as part of the **Fullstack Engineer – Frontend Development Assessment**.  
+The application visualizes call analytics data for voice agents with a modern, futuristic UI inspired by **superbryn.com**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo
 
-## React Compiler
+**Hosted on Netlify:**  
+👉 https://analytics-dashboardproject.netlify.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 Assessment Requirements Covered
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This project fulfills all frontend assessment requirements:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- ReactJS + TypeScript application  
+- Modern UI inspired by https://superbryn.com  
+- Call analytics charts using dummy data  
+- Ability to overwrite values for at least one chart  
+- Email-based persistence using Supabase  
+- Overwrite confirmation when existing data is found  
+- Deployed web endpoint on cloud  
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ✨ Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Interactive Call Analytics Dashboard**
+  - Weekly Call Volume (Area Chart)
+  - Call Distribution (Donut Chart)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **User Input & Persistence**
+  - Users provide an email before editing analytics
+  - Custom values are saved in Supabase against the email
+  - Previously saved values are fetched automatically
+  - Overwrite confirmation shown before updating data
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Modern UI / UX**
+  - Dark, futuristic theme
+  - Animated background with subtle floating nodes
+  - Glassmorphism cards
+  - Smooth transitions and chart animations
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, TypeScript, Vite  
+- **Styling:** Tailwind CSS + custom CSS  
+- **Charts:** Recharts  
+- **Animations:** Framer Motion  
+- **Backend / Database:** Supabase (PostgreSQL)  
+- **Deployment:** Netlify  
+
+---
+
+## 🗂️ Project Structure
+
+├── public/
+│ └── _redirects
+├── src/
+│ ├── components/
+│ │ ├── CallVolumeChart.tsx
+│ │ ├── CallDistributionChart.tsx
+│ │ └── FuturisticBackground.tsx
+│ ├── lib/
+│ │ └── supabase.ts
+│ ├── App.tsx
+│ └── main.tsx
+├── index.css
+├── tailwind.config.ts
+└── package.json
+
+yaml
+Copy code
+
+---
+
+## ⚙️ Local Setup & Run
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/rohit-singh16/analytics-dashboard.git
+cd analytics-dashboard
+2️⃣ Install dependencies
+bash
+Copy code
+npm install
+3️⃣ Create .env file
+env
+Copy code
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+4️⃣ Run locally
+bash
+Copy code
+npm run dev
+☁️ Deployment
+The project is deployed using Netlify (GitHub-based CI/CD).
+
+Environment variables are configured in Netlify dashboard.
+
+_redirects file ensures proper SPA routing.
+
+🧠 Technical Decisions (Brief)
+Supabase was chosen for fast setup, persistence, and real-time capability.
+
+Email-based storage satisfies overwrite and retrieval requirements without authentication friction.
+
+Recharts provides performant and customizable data visualizations.
+
+Netlify enables simple, reliable frontend deployment with environment variable support.
+
+🔒 Security Note
+This project intentionally allows public read/write access for demo purposes.
+In a production setup, Supabase Auth and stricter Row Level Security policies would be applied.
+
