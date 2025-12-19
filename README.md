@@ -49,6 +49,8 @@ This project fulfills all frontend assessment requirements:
 <img width="1850" height="734" alt="image" src="https://github.com/user-attachments/assets/703a0b00-67db-40c8-8d68-7b81e6a8231f" />
 <img width="1828" height="715" alt="image" src="https://github.com/user-attachments/assets/82da7774-cdbb-4d28-b161-f882cf0ec588" />
 <img width="1870" height="797" alt="image" src="https://github.com/user-attachments/assets/ff32d53d-1dce-4864-9bd1-6af1379f8e62" />
+<img width="1429" height="649" alt="image" src="https://github.com/user-attachments/assets/92ae5296-d38c-4269-85a2-daf4c96150bd" />
+
 
 ## 🛠️ Tech Stack
 
